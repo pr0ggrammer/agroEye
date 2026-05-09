@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Build output
+client/dist/
+
+# Database files
+server/db/*.db
+server/db/*.db-shm
+server/db/*.db-wal
+
+# Uploads (user content)
+server/uploads/*
+!server/uploads/.gitkeep
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
