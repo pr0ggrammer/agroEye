@@ -9,7 +9,7 @@ function seed() {
   if (!existingUser) {
     const hash = bcrypt.hashSync('agroeye2024', 10);
     db.prepare('INSERT INTO users (username, password_hash, full_name, role) VALUES (?, ?, ?, ?)').run('admin', hash, 'Admin User', 'admin');
-    
+
     const staffHash = bcrypt.hashSync('staff123', 10);
     db.prepare('INSERT INTO users (username, password_hash, full_name, role) VALUES (?, ?, ?, ?)').run('staff1', staffHash, 'Farm Staff', 'staff');
     console.log('  ✅ Users created');
@@ -73,4 +73,9 @@ function seed() {
   console.log('🌿 Seeding complete!');
 }
 
-seed();
+module.exports = seed;
+
+// Run directly if called as standalone script (npm run seed)
+if (require.main === module) {
+  seed();
+}
