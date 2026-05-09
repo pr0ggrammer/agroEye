@@ -1,0 +1,134 @@
+.farm-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.farm-card-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-primary);
+  opacity: 0.6;
+  transition: all var(--transition-base);
+}
+
+.farm-card-accent.alert {
+  background: var(--gradient-danger);
+  opacity: 1;
+  height: 4px;
+}
+
+.farm-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--space-sm);
+}
+
+.farm-name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.farm-plant-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--green-50);
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.farm-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.farm-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: 6px;
+}
+
+.farm-location {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.farm-description {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+  line-height: 1.4;
+}
+
+/* Temperature Alert Banner */
+.temp-alert-banner {
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: var(--space-md);
+  animation: slideUp 0.3s ease;
+}
+
+.temp-alert-banner.warning {
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  color: #b45309;
+}
+
+.temp-alert-banner.critical {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  color: #dc2626;
+}
+
+.temp-alert-text {
+  line-height: 1.4;
+}
+
+/* Plant Quick Info */
+.plant-quick-info {
+  display: flex;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.plant-quick-info span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.farm-readings {
+  display: flex;
+  gap: var(--space-md);
+  margin-top: var(--space-sm);
+}
+
+.farm-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border-subtle);
+}
+
+@media (max-width: 480px) {
+  .farm-readings {
+    flex-direction: column;
+  }
+}

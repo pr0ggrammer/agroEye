@@ -1,0 +1,59 @@
+…\AgroEye\server > node server.js
+
+🌿 AgroEye Server running on http://localhost:5000
+📊 API available at http://localhost:5000/api
+
+🔄 Sensor simulator started (updates every 2 minutes)
+📡 Sensor readings updated at 3:38:22 pm
+📡 Sensor readings updated at 3:40:22 pm
+
+PS C:\Users\Tanvi\Desktop\AgroEye> cd client
+PS C:\Users\Tanvi\Desktop\AgroEye\client> npm run dev
+
+> client@0.0.0 dev
+> vite
+
+4:44:23 pm [vite] (client) Re-optimizing dependencies because vite config has changed
+
+  VITE v8.0.3  ready in 1768 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+
+
+
+
+PS C:\Users\Tanvi\Desktop\AgroEye> cd server
+PS C:\Users\Tanvi\Desktop\AgroEye\server> cd db
+PS C:\Users\Tanvi\Desktop\AgroEye\server\db> npm run seed.js
+npm error Missing script: "seed.js"
+npm error
+npm error To see a list of scripts, run:
+npm error   npm run
+npm error A complete log of this run can be found in: C:\Users\Tanvi\AppData\Local\npm-cache\_logs\2026-04-03T11_11_13_703Z-debug-0.log
+PS C:\Users\Tanvi\Desktop\AgroEye\server\db> ls
+
+
+    Directory: C:\Users\Tanvi\Desktop\AgroEye\server\db
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        03-04-2026     15:37          40960 agroeye.db
+-a----        03-04-2026     15:38          32768 agroeye.db-shm
+-a----        03-04-2026     16:12         510912 agroeye.db-wal
+-a----        03-04-2026     15:12           3492 seed.js
+
+
+PS C:\Users\Tanvi\Desktop\AgroEye\server\db> npm run seed
+
+> agroeye-server@1.0.0 seed
+> node db/seed.js
+
+🌱 Seeding database...
+  ⏭️ Users already exist
+  ⏭️ Tanks already exist
+  ⏭️ Farms already exist
+  ⏭️ Sensor readings already exist
+🌿 Seeding complete!

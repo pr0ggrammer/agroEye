@@ -1,0 +1,376 @@
+.ai-panel {
+  padding: var(--space-lg);
+}
+
+.ai-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+}
+
+.ai-panel-header h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* Loading Animation */
+.ai-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-2xl) 0;
+}
+
+.ai-loading-animation {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-lg);
+}
+
+.ai-scan-line {
+  position: absolute;
+  inset: 0;
+  border: 3px solid transparent;
+  border-top-color: var(--green-400);
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.ai-scan-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-loading-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.ai-loading-sub {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* Empty State */
+.ai-empty {
+  text-align: center;
+  padding: var(--space-xl) 0;
+}
+
+.ai-empty-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-md);
+  opacity: 0.4;
+}
+
+.ai-empty h4 {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-sm);
+}
+
+.ai-empty p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-lg);
+}
+
+.ai-capabilities {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.ai-cap-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* Health Score */
+.health-score-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.health-score-ring {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.health-ring-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.health-ring-progress {
+  transition: stroke-dasharray 1s ease;
+}
+
+.health-score-value {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.health-score-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* AI Sections */
+.ai-section {
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.ai-section:last-of-type {
+  border-bottom: none;
+}
+
+.ai-section-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+  color: var(--text-accent);
+}
+
+/* NPK Bars */
+.npk-item {
+  margin-bottom: var(--space-md);
+}
+
+.npk-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.npk-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.npk-value {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.npk-bar-bg {
+  width: 100%;
+  height: 8px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-full);
+  position: relative;
+  overflow: hidden;
+}
+
+.npk-bar {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 0.8s ease;
+}
+
+.npk-optimal-range {
+  position: absolute;
+  top: -2px;
+  height: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.npk-range-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.npk-status {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.65rem;
+  padding: 2px 6px;
+  border-radius: var(--radius-full);
+}
+
+.npk-status.optimal {
+  color: var(--status-healthy);
+  background: rgba(16, 185, 129, 0.08);
+}
+
+.npk-status.low {
+  color: var(--status-info);
+  background: rgba(59, 130, 246, 0.08);
+}
+
+.npk-status.high {
+  color: var(--status-warning);
+  background: rgba(245, 158, 11, 0.08);
+}
+
+/* Pest Detection */
+.pest-detected {
+  animation: slideUp 0.4s ease;
+}
+
+.pest-alert-card {
+  background: rgba(239, 68, 68, 0.03);
+  border: 1px solid rgba(239, 68, 68, 0.12);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
+
+.pest-alert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-md);
+}
+
+.pest-confidence {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.pest-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.pest-description {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: var(--space-md);
+}
+
+.pest-recommendation {
+  background: rgba(16, 185, 129, 0.04);
+  border: 1px solid rgba(16, 185, 129, 0.12);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.pest-recommendation h5 {
+  font-size: 0.85rem;
+  color: var(--text-accent);
+  margin-bottom: 8px;
+}
+
+.pest-pesticide {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.pest-application {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: var(--space-md);
+}
+
+.pest-buy-btn {
+  width: 100%;
+  justify-content: center;
+  font-size: 0.88rem;
+}
+
+.pest-prevention {
+  padding: var(--space-md);
+  background: rgba(59, 130, 246, 0.03);
+  border: 1px solid rgba(59, 130, 246, 0.12);
+  border-radius: var(--radius-md);
+}
+
+.pest-prevention h5 {
+  font-size: 0.85rem;
+  color: var(--status-info);
+  margin-bottom: 8px;
+}
+
+.pest-prevention p {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Healthy State */
+.pest-healthy {
+  text-align: center;
+  padding: var(--space-lg) 0;
+}
+
+.pest-healthy-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-sm);
+}
+
+.pest-healthy h4 {
+  font-size: 1.1rem;
+  color: var(--status-healthy);
+  margin-bottom: 6px;
+}
+
+.pest-healthy p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.ai-timestamp {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  text-align: center;
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border-subtle);
+}

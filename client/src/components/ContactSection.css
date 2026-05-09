@@ -1,0 +1,41 @@
+.contact-section {
+  background: linear-gradient(180deg, transparent 0%, rgba(5, 150, 105, 0.03) 100%);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-lg);
+}
+
+.contact-card {
+  text-align: center;
+  padding: var(--space-xl) var(--space-lg);
+}
+
+.contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-md);
+}
+
+.contact-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+  color: var(--text-accent);
+}
+
+.contact-card p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.contact-note {
+  margin-top: 8px;
+  font-size: 0.78rem !important;
+  color: var(--text-muted) !important;
+  font-style: italic;
+}

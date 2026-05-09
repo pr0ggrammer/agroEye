@@ -1,0 +1,33 @@
+.farm-section {
+  background: linear-gradient(180deg, transparent 0%, rgba(5, 150, 105, 0.02) 50%, transparent 100%);
+}
+
+.alert-legend {
+  display: flex;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+  padding: 12px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  flex-wrap: wrap;
+  box-shadow: var(--shadow-sm);
+}
+
+.alert-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.alert-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.alert-dot.green { background: var(--status-healthy); }
+.alert-dot.orange { background: var(--status-warning); }
+.alert-dot.red { background: var(--status-danger); }
