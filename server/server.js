@@ -67,9 +67,9 @@ app.use((err, req, res, next) => {
 });
 
 // Start server
-app.listen(PORT, () => {
-  console.log(`\n🌿 AgroEye Server running on http://localhost:${PORT}`);
-  console.log(`📊 API available at http://localhost:${PORT}/api\n`);
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`\n🌿 AgroEye Server running on port ${PORT}`);
+  console.log(`📊 API available at /api\n`);
 
   // Start sensor data simulator
   startSimulator();
